@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 RUN apt update
+RUN apt upgrade -y
 RUN apt install zip wget unzip dos2unix aria2 cabextract wimtools chntpw genisoimage -y
 COPY create.sh .
 RUN chmod +x create.sh
